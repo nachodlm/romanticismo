@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box; /*en todo*/
+}
+@font-face {
+    font-family: "titulos" ;
+    src: url(../romanticismo/Fonts/KolkerBrush-Regular.ttf);
+}
+
+@font-face {
+    font-family: "priscila";
+    src: url(../romanticismo/Fonts/KolkerBrush-Regular.ttf);
+}
+
+body {
+    font-family:"titulos" ;
+    font-size: 40px;
+    background-color: lightcoral;
+    margin: 0; padding: 0; /* Resetear el por defecto de la ventana */
+}
+
+#wrapper {
+    width: 80%;
+    margin: auto;
+    background-color: black;
+    font-size: 1rem;
+    color: #fff;
+}
+#Hero {background-image: url('/home/usuario/Escritorio/aplicaciones web/romanticismo/Imagenes/John_EverettMilllais_Ophelia.jpg');
+       height: 100vh;  /* para obligar que sea todo el alto */
+       background-repeat:  no-repeat; /* No se repita*/
+       background-size: cover; /* Cubre todo el fondo */
+       background-position: 33%; /* Fija lo que hay en el medio*/
+       font-family: "priscila";
+       font-size: 7rem;
+       padding-left: 20px;
+       padding-top: 20px;
+    }
+/*HERO2 : HAKEI.APP +POSITION*/
+#Hero2 {background-image: url('/home/usuario/Escritorio/aplicaciones web/romanticismo/Imagenes/low-poly-grid-haikei.svg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /*El hero se mueve de sitio*/
+
+}
+/*HERO 3 : COLOR LISO + GETWAVES.IO*/
+#Hero3 {
+    background-color: #5000ca; /*DEBE SER EL MISMO COLOR QUE LA OLA*/
+    height: 35vh;
+    position: relative;
+}
+#titulo2 {font-family: "titulos";
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    text-align: center; /*podia haber sido un padding */
+
+    /*estas cuatro rglas colocan una caja en medio de otra*/
+    position: absolute; /*Se fija dentro de hero*/
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* para el efeto froted glass (el fondo debe ser blanco y con opacidad por debajo de 0.5)*/
+    backdrop-filter: blur(5px);
+}
+#titulo3{
+    font-family: titulos;
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#titulo {background-color: rgba(255,255,255,0.2);
+         width: 38%;
+         text-align: center;
+         border-radius: 20%;}
+
+/**MEDIA QUERIES**/ 
+@media only screen and (width<=900px){
+    #wrapper {width: 90%;}
+}
+
+@media only screen and (width<=600px){
+    #wrapper {width: 100%;}
+}
+
+@media only screen and (width<=900){
+    #hero {width: 120%;}
+}
